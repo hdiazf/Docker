@@ -1,0 +1,6 @@
+pip
+bokeh
+jupyter_bokeh
+jupyterlab-git
+tensorflow
+seaborn

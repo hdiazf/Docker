@@ -1,0 +1,8 @@
+ version: '3'
+ services:
+   machine_learning:
+     ports:
+     - "8888:8888"
+     volumes:
+     - /home/hernan/ML/proyectos:/machine_learning
+     build: .

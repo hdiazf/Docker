@@ -1,0 +1,9 @@
+ version: '3'
+ services:
+   machine_learning_no_gpu:
+     image: tensorflow_no_gpu
+     ports:
+     - "8888:8888"
+     volumes:
+     - /home/hernan/ML/proyectos:/home/jovyan/hernan
+     build: .
