@@ -1,5 +1,11 @@
 FROM jupyter/tensorflow-notebook:latest
 COPY requirements.txt requirements.txt
+
+USER root
+RUN sudo apt-get update
+RUN sudo -S apt-get -y install ssh
+
+USER jovyan
 RUN pip install --ignore-installed --no-cache-dir -r requirements.txt
 RUN jupyter labextension install nbdime-jupyterlab --no-build && \
     jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build && \
